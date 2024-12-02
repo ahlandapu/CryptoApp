@@ -1,6 +1,6 @@
-# Aplikasi Sederhana: RSA Encryption & Decryption
+# Aplikasi Sederhana: Hashing, AES dan RSA
 
-Aplikasi ini merupakan implementasi sederhana dari **enkripsi dan dekripsi menggunakan algoritma RSA** dengan PHP dan MySQL. Aplikasi ini dirancang untuk menyimpan data terenkripsi ke dalam database dan mendekripsinya kembali saat diperlukan.
+Aplikasi ini merupakan implementasi sederhana dari **Kriptografi** dengan PHP dan MySQL. Aplikasi ini dirancang untuk menyimpan data terenkripsi ke dalam database dan mendekripsinya kembali saat diperlukan.
 
 ---
 
