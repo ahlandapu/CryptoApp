@@ -1,0 +1,34 @@
+Cara Kerja
+
+Insert Data:
+Pengguna mengisi username dan data melalui register.php.
+Data yang dimasukkan akan dienkripsi dengan AES-256-CBC sebelum disimpan di database.
+
+Retrieve Data:
+Data diambil dari database dan didekripsi menggunakan key yang sama di retrieve.php.
+Menampilkan data asli, data terenkripsi, dan hasil dekripsi.
+
+Penggunaan IV:
+Setiap enkripsi menggunakan Initialization Vector (IV) unik untuk meningkatkan keamanan.
+
+PDO:
+Menggunakan PDO untuk mencegah serangan SQL Injection.
+
+Note : file insert.php untuk menyimpan data dan retrieve.php untuk membaca serta mendekripsi data tersebut.
+
+Pada file enc_dec.php private key di hashing menggunakan sha256, agar :
+- menghasilkan kunci yang valid 256-bit (32 byte), 
+- faktor keamanan(sulit ditebak),
+- konsistensi kunci, saat di encrypt dan saat di decrypt
+
+Pada file enc_dec.php terdapat fungsi explode
+Fungsi explode di PHP digunakan untuk memecah string menjadi array berdasarkan delimiter tertentu.
+- Data terenkripsi yang telah dikodekan dalam format Base64 diubah kembali ke format aslinya (binary string).
+- Ketika data dienkripsi, hasilnya disimpan dalam format gabungan:
+<encrypted_data>::<iv>
+- Contoh sebelum di explode
+cz92IW0/KvP7CQzpeEZH9A==::B3Ex8UQJnTmr62I9g5fFhQ==
+- Contoh sesudah di explode
+$encrypted_data = "cz92IW0/KvP7CQzpeEZH9A==";  --> Ini adalah hasil utama dari enkripsi AES, Diperlukan untuk didekripsi menjadi plaintext.
+$iv = "B3Ex8UQJnTmr62I9g5fFhQ=="; -->  nilai acak yang ditambahkan pada proses enkripsi untuk memastikan hasil yang unik meskipun data input sama 
+                                    harus disertakan saat proses dekripsi agar hasilnya valid.
