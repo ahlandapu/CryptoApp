@@ -1,0 +1,8 @@
+File: config.php
+File ini digunakan untuk mengatur koneksi ke database.
+
+File: register.php
+Form untuk registrasi pengguna baru.
+
+File: login.php
+Form untuk login pengguna dan verifikasi password.
