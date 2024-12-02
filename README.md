@@ -20,5 +20,5 @@ Aplikasi ini merupakan implementasi sederhana dari **Kriptografi** dengan PHP da
 
 ---
 
-📝 Lisensi
+## 📝 Lisensi
 Aplikasi ini dilisensikan di bawah MIT License. Anda bebas menggunakan, memodifikasi, dan mendistribusikan ulang aplikasi ini dengan syarat tetap menyertakan lisensi ini.
